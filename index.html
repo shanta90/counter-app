@@ -18,24 +18,28 @@
         const increaseBtn = document.getElementById('Increase');
         const decreaseBtn = document.getElementById('Decrease');
 
-        // let count = 0;
+        let count = 0;
 
         increaseBtn.addEventListener('click', () => {
-            if(counter.innerText <= 4){
-               counter.innerText=parseInt(counter.innerText)+1;
+            if(count < 5){
+               count++;
+               counter.innerText=count;
             } else {
-               counter.innerText="You Have Reached Your Limit";
+             counter.innerText="You Have Reached Your Limit";
+              
+                 
             }
-            decreaseBtn.addEventListener('click', () => {
-      
+           
         });
 
         decreaseBtn.addEventListener('click', () => {
-          if(counter.innerText >= 1){
-            counter.innerText=parseInt(counter.innerText)-1;
+          if(count > 0){
+            count--;
+            counter.innerText=count;
           }
           else {
                counter.innerText="You Have Reached Your Limit";
+           
             }
         });
     </script>
