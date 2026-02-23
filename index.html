@@ -23,13 +23,20 @@
         increaseBtn.addEventListener('click', () => {
             if(counter.innerText <= 4){
                counter.innerText=parseInt(counter.innerText)+1;
+            } else {
+               counter.innerText="You Have Reached Your Limit";
             }
+            decreaseBtn.addEventListener('click', () => {
+      
         });
 
         decreaseBtn.addEventListener('click', () => {
           if(counter.innerText >= 1){
             counter.innerText=parseInt(counter.innerText)-1;
           }
+          else {
+               counter.innerText="You Have Reached Your Limit";
+            }
         });
     </script>
 </body>
