@@ -24,8 +24,12 @@
             if(count < 5){
                count++;
                counter.innerText=count;
+               document.body.style.backgroundColor="white";
             } else {
              counter.innerText="You Have Reached Your Limit";
+             document.body.style.backgroundColor="red";
+//              
+         
               
                  
             }
@@ -36,10 +40,13 @@
           if(count > 0){
             count--;
             counter.innerText=count;
+            document.body.style.backgroundColor="white";
           }
           else {
                counter.innerText="You Have Reached Your Limit";
-           
+        
+ document.body.style.backgroundColor="green";
+            
             }
         });
     </script>
