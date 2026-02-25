@@ -1,54 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter App</title>
 </head>
+
 <body style="text-align: center; margin-top: 250px;">
 
     <h1 id="counter">0</h1>
     <div style="display: flex; justify-content: center; gap: 20px;">
-    
-    <button id="Decrease">Decrease</button>
-    <button id="Increase">Increase</button>
+
+        <button id="Decrease">Decrease</button>
+        <button id="Increase">Increase</button>
     </div>
+    <div id="display" style="margin-top: 20px; border:10px solid rgba(0, 0, 0, 0.226);"></div>
+    <button class="btn">1</button>
+    <button class="btn">2</button>
+    <button class="btn">3</button>
+    <button class="btn">4</button>
+    <button class="btn">5</button>
+    <button class="btn">6</button>
+    <button class="btn">7</button>
+    <button class="btn">8</button>
+    <button class="btn">9</button>
+    <button class="btn">10</button>
+
     <script>
         const counter = document.getElementById('counter');
         const increaseBtn = document.getElementById('Increase');
         const decreaseBtn = document.getElementById('Decrease');
+        const button = document.querySelectorAll('.btn');
+
+        // let display = document.getElementById('display');
+
+        console.log(button);
+        button.forEach((pochabedi)=>{
+            
+            pochabedi.addEventListener('click', () => {
+                counter.innerText = pochabedi.innerText;
+                display.innerText= pochabedi.innerText;
+               
+            });
+        }); 
+       
+
+
+
+
+
+
+
 
         let count = 0;
 
         increaseBtn.addEventListener('click', () => {
-            if(count < 5){
-               count++;
-               counter.innerText=count;
-               document.body.style.backgroundColor="white";
+            if (count < 5) {
+                count++;
+                counter.innerText = count;
+                document.body.style.backgroundColor = "white";
             } else {
-             counter.innerText="You Have Reached Your Limit";
-             document.body.style.backgroundColor="red";
-//              
-         
-              
-                 
+                counter.innerText = "You Have Reached Your Limit";
+                document.body.style.backgroundColor = "red";
+
             }
-           
+
         });
 
         decreaseBtn.addEventListener('click', () => {
-          if(count > 0){
-            count--;
-            counter.innerText=count;
-            document.body.style.backgroundColor="white";
-          }
-          else {
-               counter.innerText="You Have Reached Your Limit";
-        
- document.body.style.backgroundColor="green";
-            
+            if (count > 0) {
+                count--;
+                counter.innerText = count;
+                document.body.style.backgroundColor = "white";
+            }
+            else {
+                counter.innerText = "You Have Reached Your Limit";
+
+                document.body.style.backgroundColor = "green";
+
             }
         });
+
+
+
+
     </script>
 </body>
+
 </html>
+
+
+
+
+
