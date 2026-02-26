@@ -44,6 +44,8 @@
                
             });
         }); 
+        const display = document.getElementById('display');
+        console.log(display);
        
 
 
@@ -84,7 +86,16 @@
 
 
 
+let btn = document.querySelectorAll('.btn');
+btn.forEach((pochabedi)=> {
+    pochabedi.addEventListener('click', () => {
+        counter.innerText = pochabedi.innerText;
+        display.innerText= pochabedi.innerText;
+       
+    });getElementById('display').innerText = pochabedi.innerText;
+    textContent = pochabedi.innerText;
 
+})
     </script>
 </body>
 
